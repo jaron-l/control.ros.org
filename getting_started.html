@@ -32,17 +32,17 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Core functionalities" href="ros2_control/doc/index.html" />
+    <link rel="next" title="API Documentation" href="ros2_control/doc/index.html" />
     <link rel="prev" title="Welcome to the ros2_control documentation!" href="index.html" /> 
 </head>
 
@@ -108,7 +108,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#running-the-framework-for-your-robot">Running the Framework for Your Robot</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ros2_control/doc/index.html">Core functionalities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros2_control/doc/index.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros2_control/doc/index.html#core-functionalities">Core functionalities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ros2_controllers/doc/controllers_index.html">ros2_controllers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ros2_control/ros2controlcli/doc/userdoc.html">Command Line Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="differences_to_ros1.html">Differences to ros_control (ROS1)</a></li>
@@ -117,6 +118,7 @@
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Pull Requests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html#rules-for-the-repositories-and-process-of-merging-pull-requests">Rules for the repositories and process of merging pull requests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html#writing-documentation">Writing documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html#repository-structure-and-ci-configuration">Repository structure and CI configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
 </ul>
 
@@ -173,7 +175,7 @@
         
           
             
-              <a href="https://github.com/ros-controls/control.ros.org/blob/main/getting_started.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ros-controls/control.ros.org/blob/master/getting_started.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -328,12 +330,12 @@ For more examples and detailed explanations, check <a class="reference external"
 <p>To run the ros2_control framework, do the following.
 The example files can be found in the <a class="reference external" href="https://github.com/ros-controls/ros2_control_demos">ros2_control_demos</a> repository.</p>
 <ol class="arabic simple">
-<li><p>Create a YAML file with the configuration of the controller manager and controllers. (<a class="reference external" href="https://github.com/ros-controls/ros2_control_demos/blob/master/ros2_control_demo_robot/controllers/rrbot_forward_controller_position.yaml">Example configuration for RRBot</a>)</p></li>
+<li><p>Create a YAML file with the configuration of the controller manager and two controllers. (<a class="reference external" href="https://github.com/ros-controls/ros2_control_demos/blob/master/ros2_control_demo_bringup/config/rrbot_controllers.yaml">Example configuration for RRBot</a>)</p></li>
 <li><p>Extend the robot’s URDF description with needed <code class="docutils literal notranslate"><span class="pre">&lt;ros2_control&gt;</span></code> tags.
-It is recommended to use macro files (xacro) instead of pure URDF. (<a class="reference external" href="https://github.com/ros-controls/ros2_control_demos/blob/master/ros2_control_demo_robot/description/rrbot_system_position_only.urdf.xacro">Example URDF for RRBot</a>)</p></li>
+It is recommended to use macro files (xacro) instead of pure URDF. (<a class="reference external" href="https://github.com/ros-controls/ros2_control_demos/blob/master/ros2_control_demo_description/rrbot_description/urdf/rrbot_system_position_only.urdf.xacro">Example URDF for RRBot</a>)</p></li>
 <li><p>Create a launch file to start the node with <a class="reference external" href="https://github.com/ros-controls/ros2_control/blob/master/controller_manager/src/controller_manager.cpp">Controller Manager</a>.
 You can use a default <a class="reference external" href="https://github.com/ros-controls/ros2_control/blob/master/controller_manager/src/ros2_control_node.cpp">ros2_control node</a> (recommended) or integrate the controller manager in your software stack.
-(<a class="reference external" href="https://github.com/ros-controls/ros2_control_demos/blob/master/ros2_control_demo_robot/launch/rrbot_system_position_only.launch.py">Example launch file for RRBot</a>)</p></li>
+(<a class="reference external" href="https://github.com/ros-controls/ros2_control_demos/blob/master/ros2_control_demo_bringup/launch/rrbot_system_position_only.launch.py">Example launch file for RRBot</a>)</p></li>
 </ol>
 <p><em>NOTE:</em> You could alternatively use a script to create setup a <a class="reference external" href="https://stoglrobotics.github.io/ros_team_workspace/use-cases/setup_robot_ros2_control_hardware.html">skeleton of the “hardware_interface” package by using the scripts</a> provided by one of our maintainers.</p>
 </div>
@@ -345,7 +347,7 @@ You can use a default <a class="reference external" href="https://github.com/ros
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="ros2_control/doc/index.html" class="btn btn-neutral float-right" title="Core functionalities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ros2_control/doc/index.html" class="btn btn-neutral float-right" title="API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="index.html" class="btn btn-neutral float-left" title="Welcome to the ros2_control documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

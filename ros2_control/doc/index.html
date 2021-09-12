@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Core functionalities &mdash; control.ros.org  documentation</title>
+  <title>API Documentation &mdash; control.ros.org  documentation</title>
   
 
   
@@ -32,17 +32,17 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ros2_controllers" href="../../ros2_controllers/doc/controllers_index.html" />
+    <link rel="next" title="Controller Manager" href="../controller_manager/doc/userdoc.html" />
     <link rel="prev" title="Getting Started" href="../../getting_started.html" /> 
 </head>
 
@@ -95,8 +95,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started.html#architecture">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started.html#hardware-components">Hardware Components</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Core functionalities</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#core-functionalities">Core functionalities</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#concepts">Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../controller_manager/doc/userdoc.html">Controller Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware_interface/doc/fake_components_userdoc.html">Fake Components</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../ros2_controllers/doc/controllers_index.html">ros2_controllers</a></li>
@@ -107,6 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Pull Requests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contributing.html#rules-for-the-repositories-and-process-of-merging-pull-requests">Rules for the repositories and process of merging pull requests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contributing.html#writing-documentation">Writing documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#repository-structure-and-ci-configuration">Repository structure and CI configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../acknowledgements.html">Acknowledgements</a></li>
 </ul>
 
@@ -156,14 +163,14 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Core functionalities</li>
+      <li>API Documentation</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
             
-              <a href="https://github.com/ros-controls/control.ros.org/blob/main/ros2_control/doc/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ros-controls/control.ros.org/blob/master/ros2_control/doc/index.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -177,14 +184,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="core-functionalities">
-<span id="framework"></span><h1>Core functionalities<a class="headerlink" href="#core-functionalities" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="api-documentation">
+<span id="ros2-control-framework"></span><h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h1>
+<p>API documentation is parsed by doxygen and can be found <a class="reference external" href="/api/index.html">here</a></p>
+</div>
+<div class="section" id="core-functionalities">
+<h1>Core functionalities<a class="headerlink" href="#core-functionalities" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/ros-controls/ros2_control">GitHub Repository</a></p>
 <div class="section" id="features">
 <h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="../ros2controlcli/doc/userdoc.html#ros2controlcli-userdoc"><span class="std std-ref">Command Line Interface (CLI)</span></a></p></li>
 </ul>
+</div>
+<div class="section" id="concepts">
+<h2>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../controller_manager/doc/userdoc.html">Controller Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware_interface/doc/fake_components_userdoc.html">Fake Components</a></li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -194,7 +214,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../../ros2_controllers/doc/controllers_index.html" class="btn btn-neutral float-right" title="ros2_controllers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../controller_manager/doc/userdoc.html" class="btn btn-neutral float-right" title="Controller Manager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="../../getting_started.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
